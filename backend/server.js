@@ -20,7 +20,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const app = express();
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://biz-nest-gamma.vercel.app",
   credentials: true
 }))
 

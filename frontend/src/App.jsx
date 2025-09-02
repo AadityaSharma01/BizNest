@@ -8,6 +8,8 @@ import ScannerPage from "../components/home.components/scanner.jsx";
 import ProductPage from "../components/home.components/ProductPage.jsx";
 import ChartComponent from "../components/home.components/ChartComponent.jsx";
 
+import styles from "../styles/auth.module.css"
+
 const App = () => {
   const [user, setUser] = useState(null);
 
@@ -18,16 +20,18 @@ const App = () => {
   }, []);
 
   return (
-    <Routes>
-      {/* Redirect if already logged in */}
-      <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/" />} />
-      <Route path="/register" element={!user ? <Register setUser={setUser} /> : <Navigate to="/" />} />
+    <div>
+      <Routes className={styles.loginbox}>
+        {/* Redirect if already logged in */}
+        <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/" />} />
+        <Route path="/register" element={!user ? <Register setUser={setUser} /> : <Navigate to="/" />} />
 
-      {/* Protected Routes */}
-      <Route path="/" element={user ? <ScannerPage user={user} /> : <Navigate to="/login" />} />
-      <Route path="/postProd" element={<ProductPage />} />
-      <Route path="/chart" element={<ChartComponent />} />
-    </Routes>
+        {/* Protected Routes */}
+        <Route path="/" element={user ? <ScannerPage user={user} /> : <Navigate to="/login" />} />
+        <Route path="/postProd" element={<ProductPage />} />
+        <Route path="/chart" element={<ChartComponent />} />
+      </Routes>
+    </div>
   );
 };
 

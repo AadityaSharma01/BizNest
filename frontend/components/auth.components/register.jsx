@@ -18,15 +18,17 @@ const Register = () => {
     }
 
     return (
-        <>
+        <div style={{ display: "flex", justifyContent: "center", position: "relative", top: "22.5vh" }}>
             {regsts ? (<Link className={styles.login} to='/login'>Login</Link>) : (
-                <>
-                    <input className={styles.input} type="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="enter email"/>
-                    <input className={styles.input} type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="enter password"/>
+                <div style={{ width: "400px", backgroundColor: "rgb(55, 55, 55)", height: "400px", display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center", borderRadius: "40px" }}>
+                    <img src="../../public/BN logo embossed.png" alt="" className={styles.imagee} />
+                    <input className={styles.input} type="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="enter email" />
+                    <input className={styles.input} type="password" onChange={e => setPassword(e.target.value)} value={password} placeholder="enter password" />
                     <button className={styles.register} onClick={handleRegister}>Register</button>
-                </>
+                    <Link className={styles.login} to='/login'>Login</Link>
+                </div>
             )}
-        </>
+        </div>
     )
 }
 

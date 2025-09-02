@@ -1,35 +1,53 @@
-/* auth.module.css */
+@import url('https://fonts.cdnfonts.com/css/product-sans');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.loginbox{
+  background-color: #e8e4e4;
+  width: 25vw;
+}
 
 .input {
   display: block;
+  text-align: center;
   width: 100%;
   max-width: 300px;
   margin: 10px auto;
   padding: 10px 12px;
+  font-family: 'Product Sans';
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #444444;
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s ease;
+  font-size: 15px;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .input:focus {
-  border-color: #333;
+  border-color: #000000;
+}
+
+.imagee{
+  width: 100px;
+  height: auto;
+  margin-bottom: 30px;
 }
 
 .login {
   display: block;
-  width: 100%;
+  width: 60%;
   max-width: 300px;
   margin: 15px auto;
   padding: 10px 12px;
-  font-size: 1rem;
-  background-color: #333;
+  font-size: 2rem;
+  background-color: rgb(55, 55, 55);
   color: white;
-  border: none;
+  border: 2px rgb(148, 148, 148) solid;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  font-family: "VT323", monospace;
+  font-size: 15px;
 }
 
 .login:hover {
@@ -40,12 +58,14 @@
   display: block;
   margin: 20px auto;
   text-align: center;
-  color: #555;
-  text-decoration: underline;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "VT323", monospace;
+  background-color: transparent;
+  border: none;
 }
 
 .register:hover {
-  color: #111;
+  text-decoration: underline;
 }

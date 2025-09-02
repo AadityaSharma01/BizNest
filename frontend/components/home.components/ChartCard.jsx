@@ -41,7 +41,7 @@ const DataForChart = async () => {
         /////
 
         // console.log({ labels, datasets, aires})
-        return { labels, datasets, aiResAPI};
+        return { labels, datasets, aiResAPI, grouped};
 
     } catch (error) {
         console.log(error);

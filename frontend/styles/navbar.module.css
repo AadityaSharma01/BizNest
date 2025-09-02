@@ -34,12 +34,14 @@
  }
 
  .welcome {
-   font-size: 16px;
+   font-size: 20px;
    font-weight: 600;
    color: #e0e7ff;
    /* soft indigo */
    margin-left: 12px;
    user-select: text;
+   position: relative;
+   left: 5.6vw;
  }
 
  .link {

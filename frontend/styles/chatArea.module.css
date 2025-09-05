@@ -55,7 +55,7 @@
 }
 
 .sendButton {
-    background: url("/up-arrow.png");
+    background: url("../src/assets/up-arrow.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
